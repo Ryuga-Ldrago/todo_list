@@ -1,38 +1,100 @@
+body{
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #363636;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-contanier{
+  background: grey;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: auto;
+  padding: 2% 2%;
+  gap:20px;
+  margin-top: 5%;
+}
+.show-data{
+  display: flex;
+  align-items: center;
+  /* border: 2px solid red; */
+  padding:0px 10px;
+  width: 60%;
+  gap: 30px;
+  border-radius: 20px;
+  justify-content: space-between;
+  background-color: #a8a3a3;
+  clear:both;
+}
+
+.show-data h4{
+  /* margin-top: 12px; */
+  /* margin-bottom: 12px; */
+ 
+}
+.show-data button , .remove-btn button{ 
+
+    color: white;
+    background-color: red;
+    border: 2px solid red;
+    padding: 7px 26px;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all .5s;
+
+}
+
+.show-data button:hover ,.remove-btn button:hover{
+  color: red;
+  background-color: white;
+  /* border: 2px solid red; */
+}
+
+
+.enter-field{
+  /* border: 2px solid red; */
+  width: 80%;
+  position: relative;
+}
+input[type=text]{
+  width: 90%;
+  padding: 8px 20px;
+  border: 2px solid green;
+  border-radius: 20px;
+  transition: ease-in-out, all .35s ease-in-out;
+}
+
+input[type=text]:focus{
+  border: 2px solid red;
+
+}
+
+::placeholder{
+  font-size: 15px;
+}
+
+.enter-field .btn{
   color: white;
+    background-color: green;
+    border: 2px solid green;
+    padding: 7px 26px;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    width:100px;
+    position: absolute;
+    right: 9px;
+    top:0.5px;
+    transition: all .5s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.enter-field .btn:hover{
+  color: green;
+  background-color: white;
 }
